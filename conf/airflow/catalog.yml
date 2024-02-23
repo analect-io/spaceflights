@@ -1,0 +1,28 @@
+active_modelling_pipeline.regressor:
+  filepath: data/06_models/regressor_active.pickle
+  type: pickle.PickleDataset
+  versioned: true
+candidate_modelling_pipeline.regressor:
+  filepath: data/06_models/regressor_candidate.pickle
+  type: pickle.PickleDataset
+  versioned: true
+companies:
+  filepath: data/01_raw/companies.csv
+  type: pandas.CSVDataset
+model_input_table:
+  filepath: data/03_primary/model_input_table.pq
+  type: pandas.ParquetDataset
+preprocessed_companies:
+  filepath: data/02_intermediate/preprocessed_companies.pq
+  type: pandas.ParquetDataset
+preprocessed_shuttles:
+  filepath: data/02_intermediate/preprocessed_shuttles.pq
+  type: pandas.ParquetDataset
+reviews:
+  filepath: data/01_raw/reviews.csv
+  type: pandas.CSVDataset
+shuttles:
+  filepath: data/01_raw/shuttles.xlsx
+  load_args:
+    engine: openpyxl
+  type: pandas.ExcelDataset
